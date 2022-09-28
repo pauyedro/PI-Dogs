@@ -1,0 +1,31 @@
+.btn-nav{
+    appearance: none;
+    background-color: rgba(4, 120, 252);
+    border-radius: 5px;
+    border-style:solid;
+    box-shadow: #e5f5f7 0 -20px 100px inset;
+    box-sizing:content-box;
+    color: rgb(8, 8, 9);
+    cursor: pointer;
+    display:inline-flexbox; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 0;
+    margin: 0;
+    padding: 0.1rem 1rem;
+    text-align: center;
+    user-select:auto;
+    touch-action: manipulation;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.btn-nav:hover {
+    background-color: rgba(15, 122, 244, 0.999);
+    box-shadow: #040404 0 -6px 8px inset;
+    transform: scale3d(1.125);
+}
+
+.btn-nav:active{
+    transform: scale3d(1.005)
+}
