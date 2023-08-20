@@ -12,51 +12,79 @@ export const CLEAN_DOG= 'CLEAN_DOG'
 
 export function getAllDogs () {
     return async function(dispatch) {
-        let json= await axios.get('http://localhost:3001/dogs');
-        return dispatch({
-            type: 'GET_ALL_DOGS',
-            payload: json.data
-        })
+        try{
+            let json= await axios.get('http://localhost:3001/dogs');
+                return dispatch({
+                    type: 'GET_ALL_DOGS',
+                    payload: json.data
+                })
+        } catch (e) {
+             console.log(e)   
+        }
+        
     }
 }
 
 export function getAllTemperaments() {
     return async function(dispatch) {
-        let json= await axios.get("http://localhost:3001/temperaments")
+        try {
+            let json= await axios.get("http://localhost:3001/temperaments")
             return dispatch({
                 type: 'GET_ALL_TEMPERAMENTS',
                 payload: json.data
             })
+        } catch (e) {
+            console.log(e)
+        }
+        
     }
 };
 
 export function getByName(name) {
     return async function(dispatch) {
-        let json= await axios.get(`http://localhost:3001/dogs?name=${name}`)
+        try {
+            let json= await axios.get(`http://localhost:3001/dogs?name=${name}`)
             return dispatch({
                     type: 'GET_BY_NAME',
                     payload: json.data
             })
+        } catch (e) {
+            console.log(e);
+            return dispatch({
+                type: 'GET_BY_NAME',
+                payload: e.response.data
+            })
+        }
+        
     }
 };
 
 export function detailDogsId(id) {
     return async function(dispatch) {
-       let json= await axios.get(`http://localhost:3001/dogs/${id}`)
+        try {
+            let json= await axios.get(`http://localhost:3001/dogs/${id}`)
             return dispatch({
                     type: 'DETAIL_DOGS_ID',
                     payload: json.data
             })
+        } catch (e) {
+            console.log(e)
+        }
+       
     }
 };
 
 export function createDog(payload) {
     return async function(dispatch) {
-        const created = await axios.post('http://localhost:3001/dogs',payload)
+        try {
+           const created = await axios.post('http://localhost:3001/dogs',payload)
         return dispatch({
             type: 'CREATE_DOG',
             payload: created
-        })
+        }) 
+        } catch (e) {
+            console.log(e)
+        }
     }
 };
 
@@ -90,15 +118,3 @@ export function cleanDog(){
     }
 }
 
-// export function getAllDogs() {
-//     return function(dispatch) {
-//         return fetch('http://localhost:3001/dogs')
-//             .then( r => r.json())
-//             .then( dogs => {
-//                 dispatch({
-//                     type: 'GET_ALL_DOGS',
-//                     payload: dogs
-//                 })
-//             })
-//     }
-// };

@@ -1,0 +1,89 @@
+.card-detail {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardDetail-conteiner {
+    height: 50%;
+    width: 50%;
+    background-color:rgb(165, 201, 243);
+    border: 1px solid white;
+    box-shadow:  
+    0 0 5px rgb(165, 201, 243),
+    0 0 10px rgba(122, 168, 252, 0.961),
+    0 0 15px rgb(101, 158, 238),
+    0 0 20px rgb(77, 137, 240),
+    0 0 25px rgb(69, 107, 233),
+    0 0 30px rgb(0, 96, 250);
+    border-radius: 10px;
+}
+.detail_title {
+    width: 90%;
+    padding: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 80px;
+    margin-left: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#040404;
+    text-shadow: 0 -10px 10px rgba(4, 120, 252, 0.999), 0px -10px 10px hsl(175, 98%, 54%);
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.img-detail {
+    width: 80%;
+    border-radius: 20px;
+    position: relative;
+    object-fit: cover;
+    border: 1px solid white;
+    box-shadow:  
+    0 0 5px rgb(165, 201, 243),
+    0 0 10px rgba(122, 168, 252, 0.961),
+    0 0 15px rgb(101, 158, 238),
+    0 0 20px rgb(77, 137, 240),
+    0 0 25px rgb(69, 107, 233),
+    0 0 30px rgb(0, 96, 250);
+    border-radius: 10px;
+}
+
+.btn-detail {
+    appearance:unset;
+    background-color: rgba(4, 120, 252);
+    border-radius: 5px;
+    border-style:solid;
+    box-shadow: #e5f5f7 0 -20px 100px inset;
+    box-sizing:content-box;
+    color: rgb(8, 8, 9);
+    cursor: pointer;
+    display:inline-flexbox; 
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    user-select:auto;
+    touch-action: manipulation;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.btn-detail:hover {
+    background-color: rgba(15, 122, 244, 0.999);
+    box-shadow: #040404 0 -6px 8px inset;
+    transform: scale3d(1.125);
+}
+
+.detail-name{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.detail-detail h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    margin-top: -20px;
+}

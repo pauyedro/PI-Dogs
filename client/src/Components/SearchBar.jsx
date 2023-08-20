@@ -4,7 +4,7 @@ import { getByName } from '../redux/actions';
 
 function SearchBar({setCurrentPage}) {
     const dispatch = useDispatch()
-    const [name, setName] = useState('') //seteo un estado inicial vacio
+    const [name, setName] = useState('') 
 
     function handleChange(e){
         e.preventDefault();

@@ -1,0 +1,15 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 32px;
+    height: 32px;
+    background-color: var(--clr-dark-main);
+    color: white;
+    border-radius: 4px;
+    margin: 0 1px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }

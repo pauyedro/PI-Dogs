@@ -17,13 +17,13 @@ export default function Home() {
     const dogsAll= useSelector((state) => state.allDogs);
     const temperamentos= useSelector((state) => state.allTemperaments);
     // console.log(temperamentos);
-    // console.log(dogsAll)
+    // console.log(dogsAll);
     /************************************************* */
     //PAGINADO//
     const [currentPage, setCurrentPage]= useState(1);
     const dogsPerPage = 8;
     const indexOfLastDog= currentPage * dogsPerPage //(8) Indice del ultimo perro
-    const indexOfFirstDog= indexOfLastDog - dogsPerPage // (0) Indice del primer perro
+    const indexOfFirstDog= indexOfLastDog - dogsPerPage 
     const currentDog= dogsAll?.slice( indexOfFirstDog, indexOfLastDog)
     const paginado = (pageNum) => {
         setCurrentPage(pageNum)
@@ -108,7 +108,14 @@ export default function Home() {
                     currentDog?.map((d) => {
                         return(
                             <div className="card-conteiner" key={d.id}>
-                                    <CardDog id={d.id} name={d.name} image={d.image? d.image : "https://i.pinimg.com/originals/52/32/c6/5232c62e7931c8ca1e7acff1be2a000b.png"}  temperaments={d.createdInDb === true ? d.temperaments?.map(t => t.name + ' ') :  d.temperaments?.map( t => t + ' ')} weightMin={d.weightMin} weightMax={d.weightMax} />
+                                    <CardDog 
+                                        id={d.id} 
+                                        name={d.name}
+                                        image={d.image? d.image : "https://i.pinimg.com/originals/52/32/c6/5232c62e7931c8ca1e7acff1be2a000b.png"}  
+                                        temperaments={d.createdInDb === true ? d.temperaments?.map(t => t.name + ' ') :  d.temperaments?.map( t => t + ' ')} 
+                                        weightMin={d.weightMin} 
+                                        weightMax={d.weightMax} 
+                                    />
                             </div>
                         )
                     })

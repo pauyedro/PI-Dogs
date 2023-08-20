@@ -22,9 +22,11 @@ function rootReducer(state= initialState, action) {
                 allTemperaments: action.payload
             } 
         case GET_BY_NAME:
+            if( typeof (action.payload) !== 'object') alert(action.payload);
+            let dogSearch = typeof (action.payload) === 'object'? action.payload : state.dogs
             return{
                 ...state,
-                allDogs: action.payload
+                allDogs: dogSearch
             }
         case DETAIL_DOGS_ID:
             return{
@@ -117,28 +119,3 @@ export default rootReducer;
 
 
 
-// if ( action.payload === 'api'){
-//     const data2 = [...state.dogs].filter((perro) => perro.createdInDb === false)
-//     return {
-//         ...state,
-//         allDogs: data2
-//     }
-// } else if(action.payload === 'created'){
-//     const data1 = [...state.dogs].filter((perro) => perro.createdInDb === true)
-//     if(data1.length === 0) {
-//         alert('No hay perritos en la base de datos')
-//         return {
-//             ...state,
-//             allDogs: [...state.dogs]
-//         }
-//     }else {
-//         return {
-//             ...state,
-//             allDogs: data1
-//         }
-//     }
-// }else 
-//     return {
-//         ...state,
-//         allDogs: [...state.dogs]
-//     }

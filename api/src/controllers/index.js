@@ -36,23 +36,7 @@ const getDogsDb= async() => {
             model: Temperament,
         }
     })
-    // const info= dogs.map( d => {
-    //     let temp= d.temperaments.map(t => t.name);
-    //     let arrTemperaments= temp.join(', ');
-    //     return {
-    //         id: d.id,
-    //         name: d.name,
-    //         weightMin: parseInt(d.weightMin),
-    //         weightMax: parseInt(d.weightMax),
-    //         heightMin: parseInt(d.heightMin),
-    //         heightMax: parseInt(d.heightMax),
-    //         life_span: d.life_span,
-    //         temperaments: arrTemperaments,
-    //         createdInBd: true,
-    //         image: d.image
-    //     }
-    // })
-    // console.log(info)
+    
     return dogs;
 };
 

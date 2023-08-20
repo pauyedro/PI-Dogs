@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 function validate(input) {
     let errors={};
-    if(!input.name || input.name.trim().length === 0) {
+    if(!input.name || input.name.length === 0) {
         errors.name = 'Name is required'; 
-    } else if( input.name.search(/^[a-zA-Z\s]*$/) || input.name.search(/^\S/)) {
+    } else if( input.name.search(/^[a-zA-Z\s]*$/) || input.name.search(/^\S/)) { //name debe contener
         errors.name = 'No numbers, symbols or blanks are allowed in the name'
     };
 
@@ -81,7 +81,7 @@ export default function DogCreate() {
     function handleChange(e) {
         setInput({
             ...input,
-            [e.target.name] : e.target.value  // al input que ya hay, agregale name: name, weight min: weight min, y asi..  
+            [e.target.name] : e.target.value   
         })
         setErrors(validate({
             ...input,
@@ -90,10 +90,16 @@ export default function DogCreate() {
     };
 
     function handleSelect(e){
+        if( !input.temperaments.includes(e.target.value) ) { 
         setInput({
             ...input,
             temperaments:[...input.temperaments, e.target.value]
         })
+        } else { 
+            setInput ({
+                ...input
+            })
+        }
     };
 
     function handleSubmit(e){
@@ -137,7 +143,7 @@ export default function DogCreate() {
 
     return (
         <div>
-            <Link to='/home'><button>Volver al Home</button></Link>
+            <Link to='/home'><button>Back to Home</button></Link>
             <h2>¡Create you Dog!</h2>
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
