@@ -1,20 +1,25 @@
+
+/*
 .card-conteiner {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    align-items: stretch;
+    justify-content:center;
+    flex-direction: row;
+    padding: 10px;
     place-content: center;
     place-items: center;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 1000;
+    padding-left: -200px;
 }
+*/
 
 
 .card {
-    min-height: 100px;
-    width: 500px;
-    margin: 10px 10px;
+    min-height: 50px;
+    width: 260px;
+    margin: 40px 10px;
     padding: 1rem;
     cursor:pointer;
     background-color:rgb(165, 201, 243);
@@ -27,6 +32,7 @@
     0 0 25px rgb(69, 107, 233),
     0 0 30px rgb(0, 96, 250);
     border-radius: 10px;
+    align-self: stretch;
 }
 
 .card-img {
@@ -34,7 +40,9 @@
     height: 35vh;
     border-radius: 20px;
     position: relative;
-    object-fit: cover;
+    object-fit: fill;
+    z-index: 700;
+    transition: all .5s ease-in-out;
 }
 
 .card-content{
@@ -44,35 +52,28 @@
     opacity: 1;
 }
 
-p{
-    text-decoration: none;
-}
-
 .nameCard {
     margin: 0rem;
     text-align: center;
     color: initial;
     font-family:'Times New Roman', Times, serif;
-    font-size: 30px;
-    text-decoration: none;
+    font-size: 20px;
 }
 
 .weightCard {
-    font-size: 20px;
+    font-size: 15px;
     line-height:2rem;
     text-align:center;
     color: black;
     font-family:'Times New Roman', Times, serif;
-    text-decoration: none;
 }
 
 .temperamentCard {
-    font-size:20px;
+    font-size:15px;
     line-height:2rem;
     text-align:center;
     color: black;
     font-family:'Times New Roman', Times, serif;
-    text-decoration:none;
 }
 
 .btn-card{
@@ -86,7 +87,7 @@ p{
     cursor: pointer;
     display:inline-flexbox; 
     font-family:'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     margin: 0;
     padding: 0.5rem 1rem;
