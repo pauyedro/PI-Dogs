@@ -5,10 +5,8 @@
     grid-gap: 40px;
     margin: 0 auto;
     position: relative;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-around;
     padding: 10px 0;
-    grid-column: 4
 
 }
 

@@ -17,9 +17,9 @@
 
 
 .card {
-    min-height: 50px;
+    min-height: 500px;
     width: 260px;
-    margin: 40px 10px;
+    margin: 40px 40px;
     padding: 1rem;
     cursor:pointer;
     background-color:rgb(165, 201, 243);
@@ -94,8 +94,7 @@
     text-align: center;
     user-select:auto;
     touch-action: manipulation;
-    margin-top: 14px;
-    margin-bottom: 10px;
+    margin-top: 0px
 }
 
 .btn-card:hover {

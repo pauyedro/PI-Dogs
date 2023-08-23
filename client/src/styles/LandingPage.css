@@ -5,13 +5,14 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+
 }
 
 h1{
     font-size: 120px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 10px;
-    margin-left: 160px;
+    margin-top: -30px;
+    margin-left: -60px;
     animation-duration: 5s;
     animation-name: animacion;
     animation-iteration-count: infinite;
@@ -26,8 +27,8 @@ h1{
 
 
 #gif {
-    margin-top: 5px;
-    margin-left: 100px;
+    margin-top: -20px;
+    margin-left: -70px;
 }
 
 #btnLanding {
@@ -49,9 +50,9 @@ h1{
     text-decoration:none;
     user-select:auto;
     touch-action: manipulation;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 43px;
-    margin-left: 160px;
+    margin-left: -10px;
 }
 
 #btnLanding:hover {
@@ -66,6 +67,8 @@ h1{
 
 .links {
     justify-content: center;
+    margin-top: 0px;
+    margin-left: -220px;
 }
 
 .icon {
