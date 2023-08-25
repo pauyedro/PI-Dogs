@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createDog, getAllTemperaments } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import "../styles/DogCreate.css"
 
 
 
@@ -142,129 +143,131 @@ export default function DogCreate() {
     }
 
     return (
-        <div>
-            <Link to='/home'><button>Back to Home</button></Link>
-            <h2>¡Create you Dog!</h2>
+    <div className="create-container">
+        <div className="form-container">
+            <h2 className="form-title">¡Create you Dog!</h2>
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <div>
-                        <label>Name: </label>
+                    <div className="grupo">
+                        <label className="label">Name: </label>
                         <input
                             type='text'
-                            placeholder="Dog name..."
                             name='name'
                             value={input.name}
                             onChange={(e) => handleChange(e)}
-                        />
+                            className="create-input"
+                        /><span className="barra"></span>
                         {
                             errors.name && (
                                 <p className="errors">{errors.name}</p>
                             )
                         }
                     </div>
-                    <div>
-                        <label>Height Min: </label>
+                    <div className="grupo">
+                        <label className="label">Height Min: </label>
                         <input
                             type='number'
-                            placeholder="Centimeters..."
                             name='heightMin'
                             value={input.heightMin}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                         {
                             errors.heightMin && (
                                 <p className="errors">{errors.heightMin}</p>
                             )
                         }
                     </div>
-                    <div>
-                        <label>Height Max: </label>
+                    <div className="grupo">
+                        <label className="label">Height Max: </label>
                         <input
                             type='number'
-                            placeholder="Centimeters..."
                             name='heightMax'
                             value={input.heightMax}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                         {
                             errors.heightMax && (
                                 <p className="errors">{errors.heightMax}</p>
                             )
                         }
                     </div>
-                    <div>
-                        <label>Weight Min: </label>
+                    <div className="grupo">
+                        <label className="label">Weight Min: </label>
                         <input
                             type='number'
-                            placeholder="Kilograms..."
                             name='weightMin'
                             value={input.weightMin}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                         {
                             errors.weightMin && (
                                 <p className="errors">{errors.weightMin}</p>
                             )
                         }
                     </div>
-                    <div>
-                        <label>Weight Max: </label>
+                    <div className="grupo">
+                        <label className="label">Weight Max: </label>
                         <input
                             type='number'
-                            placeholder="Kilograms..."
                             name='weightMax'
                             value={input.weightMax}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                         {
                             errors.weightMax && (
                                 <p className="errors">{errors.weightMax}</p>
                             )
                         }
                     </div>
-                    <div>
-                        <label>Life span: </label>
+                    <div className="grupo">
+                        <label className="label">Life span: </label>
                         <input
                             type='number'
-                            placeholder="Years..."
                             name='life_span'
                             value={input.life_span}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                     </div>
-                    <div>
-                        <label>Image: </label>
+                    <div className="grupo">
+                        <label className="label">Image: </label>
                         <input
                             type='text'
-                            placeholder="URL..."
                             name='image'
                             value={input.image}
+                            className="create-input"
                             onChange={(e) => handleChange(e)}
-                        />
+                        /><span className="barra"></span>
                     </div>
-                    <div>
-                        <label>Temperaments: </label>
-                        <select onChange={(e) => handleSelect(e)}>
+                    <div className="grupo">
+                        <label className="label">Temperaments: </label>
+                        <select className="select-create" onChange={(e) => handleSelect(e)}>
                             {
                                 temps?.map((t) => (
-                                    <option key={t.ID} value={t.name}>{t.name}</option>
+                                    <option className="option-create" key={t.ID} value={t.name}>{t.name}</option>
                                 ))
                             }
-                        </select>
+                        </select><span className="barra"></span>
                             {
                                 input.temperaments.map( (name)=>(
-                                    <li key={name} >
-                                        temperament: {name}
-                                        <button id={name} type='button' onClick={(e) => handleDelete(e)}>X</button>
-                                    </li>
+                                    <ul key={name} className="list-create" >
+                                        {name}
+                                        <button className="btn-remove" id={name} type='button' onCulck={(e) => handleDelete(e)}>X</button>
+                                    </ul>
                                 ))
                             }
                     
                         </div>
-                    <button disabled={disable} type="submit">Create Dog</button>
+                    <button className="btn-create" disabled={disable} type="submit">Create Dog</button>            
+                    <Link to='/home'><button className="btn-create">Back to Home</button></Link>
                 </form>
             </div>
         </div>
+    </div>
     )
 
 }

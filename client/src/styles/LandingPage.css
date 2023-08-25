@@ -10,7 +10,7 @@
 
 h1{
     font-size: 120px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: -30px;
     margin-left: -60px;
     animation-duration: 5s;
@@ -41,7 +41,7 @@ h1{
     color: rgb(8, 8, 9);
     cursor: pointer;
     display: inline-flexbox; 
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
     font-weight: 700;
     margin: 0;
