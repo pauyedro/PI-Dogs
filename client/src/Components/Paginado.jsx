@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Paginado.css"
 
 
 export default function Paginado({dogsPerPage, dogsAll, paginado}) {
@@ -8,8 +9,7 @@ export default function Paginado({dogsPerPage, dogsAll, paginado}) {
         pageNumber.push(i+1)
     };
     return (
-        <nav>
-            <div className="paginado">
+            <div className="paginacion">
                 {
                     pageNumber && pageNumber.map(number => (
                         <span key={number}>
@@ -18,6 +18,5 @@ export default function Paginado({dogsPerPage, dogsAll, paginado}) {
                     ))
                 }
             </div>
-        </nav>
     )
 };

@@ -1,15 +1,51 @@
-.pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    width: 32px;
-    height: 32px;
-    background-color: var(--clr-dark-main);
-    color: white;
-    border-radius: 4px;
-    margin: 0 1px;
-    user-select: none;
-    cursor: pointer;
-    transition: 0.1s;
-  }
+.paginacion {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  display: inline-block;
+
+}
+
+.paginacion button {
+  appearance:unset;
+  background-color: rgba(4, 120, 252);
+  border-style:solid;
+  box-shadow: #e5f5f7 0 -20px 100px inset;
+  box-sizing:content-box;
+  color: rgb(8, 8, 9);
+  cursor: pointer;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  user-select:auto;
+  touch-action: manipulation;
+  float: left;
+  margin: 0 4px -20px 0px
+}
+
+.paginacion button:focus {
+  background-color: rgba(15, 122, 244, 0.999);
+  box-shadow: #040404 0 -6px 8px inset;
+}
+
+.paginacion button.activo {
+  background-color: rgba(15, 122, 244, 0.999);
+  box-shadow: #040404 0 -6px 8px inset;
+}
+
+.paginacion button:hover:not(.activo){
+  background-color: rgba(15, 122, 244, 0.999);
+  box-shadow: #040404 0 -6px 8px inset;
+  transform: scale3d(1.125);
+}
+
+.paginacion button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.paginacion button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
