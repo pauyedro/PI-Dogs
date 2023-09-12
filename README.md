@@ -192,24 +192,24 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
 
-#Proyecto Terminado
+# Proyecto Terminado
 
-##Landing page
+## Landing page
 
 Aquí podemos dar la bienvenida a la página y he incluido botones que llevan a mi linkedin, github y a mi correo.
 
 <img height="200" src="./landingDogs.png" />
 
-##Home 
+## Home 
 
 En el home podemos apreciar una nav, que cuenta con un boton que lleva a un formulario de creación de perros, otro a la landing y un refresh por si queremos borrar los filtros o alguna búsqueda. Los filtros son uno por alfabeto y peso ascendente y descendente. El otro es por creación de perritos o aquellos que vienen de la api. Y el último es por temperamento, el cual es combinado con el primer filtr. También tenemos el paginado, el cual marca en que página nos encontramos.
 
 <img height="200" src="./homeDogs.png" />
 
-##Formulario de creación de perros
+## Formulario de creación de perros
 
 <img height="200" src="./createDogs.png" />
 
-##Detalles de cada perro
+## Detalles de cada perro
 
 <img height="200" src="./detailsDogs.png" />
