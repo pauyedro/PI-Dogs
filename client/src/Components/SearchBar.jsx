@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getByName } from '../redux/actions';
+import "../styles/SearchBar.css"
+import lupa from "../styles/img/lupa.png"
 
-function SearchBar({setCurrentPage}) {
+function SearchBar() {
     const dispatch = useDispatch()
     const [name, setName] = useState('') 
 
@@ -16,22 +18,21 @@ function SearchBar({setCurrentPage}) {
         e.preventDefault();
         dispatch(getByName(name))
         setName('')
-        setCurrentPage(1)
+        
     }
 
     return(
-        <div>
-            <h2>Buscador</h2>
+        <div className="buscar">
             <label htmlFor="name"></label>
                     <input
                         type='text'
                         id='name'
-                        autoComplete="off"
+                        autoComplete="on"
                         value={name}
-                        placeholder='Search Dog'
+                        placeholder='Search Dog...'
                         onChange={e => handleChange(e)}
                     />
-                    <button type='submit' onClick={(e)=> handleSubmit(e)}>Buscar</button>
+                    <button className="btn-search" type='submit' onClick={(e)=> handleSubmit(e)}><img src={lupa} alt="lupa" className="iconSearch"></img></button>
         </div>
     )
 }

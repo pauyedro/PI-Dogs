@@ -77,9 +77,6 @@ export default function Home() {
         <div>
             <nav>
                 <NavBar/>
-                <SearchBar
-                    setCurrentPage={setCurrentPage}
-                />
             </nav>
             <header>
                 <section>

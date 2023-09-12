@@ -11,7 +11,7 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 0;
-    margin: 0;
+    margin-left: 10px;
     padding: 0.1rem 1rem;
     text-align: center;
     user-select:auto;
@@ -28,4 +28,48 @@
 
 .btn-nav:active{
     transform: scale3d(1.005)
+}
+
+.navContainer {
+    display: flex;
+    background-color: #e5f5f7;
+    margin: 0 16px;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-left: 20px;
+    align-items: center;
+    list-style-type: none;
+    border: 1px solid white;
+    box-shadow:  
+    0 0 5px rgb(165, 201, 243),
+    0 0 10px rgba(122, 168, 252, 0.961),
+    0 0 15px rgb(101, 158, 238),
+    0 0 20px rgb(77, 137, 240),
+    0 0 25px rgb(69, 107, 233),
+    0 0 30px rgb(0, 96, 250);
+    border-radius: 10px;
+}
+
+.buttons {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.titleNav{
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-left: -10px;
+    animation-duration: 5s;
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    align-items: center;
+}
+
+@keyframes animacion {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(100px); }
+    100% { transform: translateY(0px); } 
 }
