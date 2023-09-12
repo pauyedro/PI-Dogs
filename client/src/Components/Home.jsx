@@ -2,12 +2,12 @@ import React from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import {useState, useEffect} from 'react';
 import { filterApiDb, filterTemperaments, getAllDogs, getAllTemperaments, orderBy } from "../redux/actions/index";
-import SearchBar from "./SearchBar";
 import NavBar from "./NavBar";
 import Paginado from "./Paginado";
 import CardDog from "./CardDog"
 import "../styles/CardDog.css"
 import "../styles/CardsContainer.css"
+import "../styles/HomeFilters.css"
 
 
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
                 <NavBar/>
             </nav>
             <header>
-                <section>
+                <section >
                     <div className="filters">
                         <select onChange={e => handleSort(e)}>
                             <option value="">Order By...</option>

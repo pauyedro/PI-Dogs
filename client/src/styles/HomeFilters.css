@@ -1,0 +1,26 @@
+
+.filters {
+    display: inline;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+}
+
+.filters select {
+    background-color: rgb(165, 201, 243);
+    color:black;
+    padding: 10px;
+    font-size: 16px;
+    appearance: button;
+    outline: none;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 25px;
+}
+
+.filters select option {
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
